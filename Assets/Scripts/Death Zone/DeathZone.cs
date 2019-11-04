@@ -21,7 +21,12 @@ public class DeathZone : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        panel.SetActive(true);
-        Time.timeScale = 0;
+        Player player = other.GetComponent<Player>();
+        if (player)
+        {
+            player.isDead = true;
+            panel.SetActive(true);
+            //Time.timeScale = 0;
+        }
     }
 }

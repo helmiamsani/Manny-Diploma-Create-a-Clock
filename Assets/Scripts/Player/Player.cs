@@ -22,8 +22,8 @@ public class Player : MonoBehaviour
     private float currentSpeed;
     private float jetpackSpeed;
     private JetpackManager jetpackManager;
-    private float initialGravity;
-
+    public float initialGravity;
+    public bool isDead = false;
     // Functions
     private void Start()
     {
@@ -107,7 +107,7 @@ public class Player : MonoBehaviour
             motion.y += gravity * Time.deltaTime;
         }        
         controller.Move(motion * Time.deltaTime);
-        jetpackManager.speedText.text = jetpackManager.maxPower.ToString();
+        //jetpackManager.speedText.text = jetpackManager.maxPower.ToString();
     }
     private void Move(float inputH, float inputV, float speed)
     {
