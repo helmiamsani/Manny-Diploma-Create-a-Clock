@@ -69,6 +69,15 @@ namespace Tests
             Assert.NotNull(player, "Where is da player?? You gotta assign da player ");
         }
 
+        [UnityTest]
+        public IEnumerator PlayerMoves()
+        {
+            Vector3 initialPosition = player.transform.localPosition;
+            Vector3 direction = new Vector3(10, 0, 10);
+            player.transform.localPosition = direction;
+            yield return new WaitForEndOfFrame();
+            Assert.Greater(player.transform.localPosition.x, initialPosition.x);
+        }
 
     }
 }

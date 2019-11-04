@@ -109,7 +109,7 @@ public class Player : MonoBehaviour
         controller.Move(motion * Time.deltaTime);
         //jetpackManager.speedText.text = jetpackManager.maxPower.ToString();
     }
-    private void Move(float inputH, float inputV, float speed)
+    public void Move(float inputH, float inputV, float speed)
     {
         Vector3 direction = new Vector3(inputH, 0f, inputV);
         motion.x = direction.x * speed;
