@@ -21,10 +21,6 @@ namespace Tests
             clock = game.GetComponentInChildren<Clock>();
             player = game.GetComponentInChildren<Player>();
             deathZone = game.GetComponentInChildren<DeathZone>();
-            //GameObject clockPrefab = MonoBehaviour.Instantiate(Resources.Load<GameObject>("Prefabs/Clock"));
-            //clock = clockPrefab.GetComponent<Clock>();
-            //GameObject playerPrefab = MonoBehaviour.Instantiate(Resources.Load<GameObject>("Prefabs/Player"));
-            //player = playerPrefab.GetComponent<Player>();
         }
 
         [TearDown]
