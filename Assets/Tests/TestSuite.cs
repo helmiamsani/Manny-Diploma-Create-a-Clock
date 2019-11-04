@@ -60,5 +60,15 @@ namespace Tests
             yield return new WaitForFixedUpdate();
             Assert.IsTrue(player.isDead);
         }
+
+        [UnityTest]
+        public IEnumerator PlayerExists()
+        {
+            yield return new WaitForEndOfFrame();
+
+            Assert.NotNull(player, "Where is da player?? You gotta assign da player ");
+        }
+
+
     }
 }
